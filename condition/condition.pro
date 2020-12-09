@@ -14,7 +14,8 @@ SOURCES += \
         noquarterstate.cpp \
         soldoutstate.cpp \
         soldstate.cpp \
-        state.cpp
+        state.cpp \
+        winnerstate.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -27,4 +28,5 @@ HEADERS += \
     noquarterstate.h \
     soldoutstate.h \
     soldstate.h \
-    state.h
+    state.h \
+    winnerstate.h

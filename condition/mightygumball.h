@@ -7,7 +7,7 @@ using namespace std;
 #include <QStringList>
 #include <state.h>
 
-class MightyGumball
+class  GumballMachine
 {
 private:
     State *soldOut;
@@ -15,14 +15,23 @@ private:
     State *hasQuarter;
     State *sold;
     State *state;
+    int count;
 
 public:
-    MightyGumball();
+     GumballMachine(int numberGum);
     void insertQuarter();
     void ejectQuarter();
     void turnCrank();
     void setState(State *state);
     void dispense();
+    int getCount();
+    void refill(int count);
+    State* getState();
+    State* getSoldOutState();
+    State* getNoQuarterState();
+    State* getHasQuarterState();
+    State* getSoldState();
+    QString toString();
 };
 
 #endif // MIGHTYGUMBALL_H
