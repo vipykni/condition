@@ -6,24 +6,32 @@ using namespace std;
 #include <QString>
 #include <QStringList>
 #include <state.h>
+#include "state.h"
+#include "soldoutstate.h"
+#include "noquarterstate.h"
+#include "hasquarterstate.h"
+#include "soldstate.h"
+#include "winnerstate.h"
+
 
 class  GumballMachine
 {
 private:
-    State *soldOut;
-    State *noQuarter;
-    State *hasQuarter;
-    State *sold;
+    State *soldOutState;
+    State *noQuarterState;
+    State *hasQuarterState;
+    State *soldState;
+    State *winnerState;
     State *state;
     int count;
 
 public:
-     GumballMachine(int numberGum);
+    GumballMachine(int numberGum);
     void insertQuarter();
     void ejectQuarter();
     void turnCrank();
     void setState(State *state);
-    void dispense();
+    void releaseBall();
     int getCount();
     void refill(int count);
     State* getState();
@@ -31,6 +39,7 @@ public:
     State* getNoQuarterState();
     State* getHasQuarterState();
     State* getSoldState();
+    State* getWinnerState();
     QString toString();
 };
 

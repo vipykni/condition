@@ -1,6 +1,6 @@
 #include "state.h"
 
-state::state()
+State::State()
 {
 
 }
